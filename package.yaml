@@ -1,0 +1,30 @@
+name:                roman-numerals-haskell
+version:             0.1.0.0
+github:              "supersven/roman-numerals-haskell"
+license:             BSD3
+author:              "Sven Tennie"
+maintainer:          "sven.tennie@gmail.com"
+copyright:           "Sven Tennie, 2018"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on Github at <https://github.com/supersven/roman-numerals-haskell#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  roman-numerals-haskell-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - roman-numerals-haskell
+    - hspec == 2.*
